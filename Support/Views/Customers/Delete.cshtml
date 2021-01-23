@@ -1,0 +1,73 @@
+﻿@model Support.Models.Customers
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Customers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Isp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Isp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProblemDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProblemDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoopType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoopType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
